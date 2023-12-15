@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="model.css">
+    <link rel="stylesheet" href="script.js">
+    <script src="https://kit.fontawesome.com/6a434a4c15.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+<body>
+    <div class="main">
+    <header>
+        <nav class="navbar navbar-expand-md navbar-light fixed-top bg-lightgray">
+            <a class="navbar-brand" href="#"><h2>Casteria</h2></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Food</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Drink</a>
+                </li>
+                <li class="nav-item">
+                   <a class="nav-link" href="#">お問合せ</a>
+                </li>
+            </ul>
+            <form class="form-inline mt-2 mt-md-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            </div>
+        </nav>
+    </header>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+<style>
+    .sample-slider{
+        width:100%;
+    }
+    .sample-slider img{
+        width: 100%;
+    }
+</style>
+
+<div class="swiper sample-slider">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="img/interior.jpg" width="640" height="480"></div>
+        <div class="swiper-slide"><img src="img/restaurant.jpg" width="640" height="480"></div>
+        <div class="swiper-slide"><img src="img/food.jpg" width="640" height="480"></div>
+        <div class="swiper-slide"><img src="img/food2.jpg" width="640" height="480"></div>
+        <div class="swiper-slide"><img src="img/food3.jpg" width="640" height="480"></div>
+        <div class="swiper-slide"><img src="img/food4.jpg" width="640" height="480"></div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</div>
+
+<script>
+    const swiper = new Swiper('.sample-slider', {
+        loop: true,                         //ループ
+        slidesPerView: 1,
+        autoHeight: true,
+        autoplay: {                         //自動再生
+            delay: 2000,  
+        },   
+        pagination: {                       //ページネーション（ドット）
+            el: '.swiper-pagination',
+        },
+        navigation: {                       //ナビゲーション（矢印）
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+		    768: {
+			    slidesPerView: 2,
+		    }
+	    }
+    })
+</script>
+
+
+<section>
+    <div class="accordion">
+        <div class="option">
+            <h2>新型コロナウイルスに対する取り組みの最新情報をご案内</h2>
+            <input type="checkbox" id="toggle1" class="toggle">
+            <label class="title" for="toggle1"><h4>■衛生面に関して</h4></label>
+            <div class="content">
+                <p>・マスクを着用しての接客</p>
+                <p>・出勤前の検温の徹底</p>
+                <p>・レジカウンターやドリンク受け渡し口等への飛沫防止ガードの設置</p>
+                <p>・より頻度の高い手洗いの励行</p>
+                <p>・テーブルにお客様用の消毒用アルコールの設置</p>
+                <p>・従業員間の距離確保のため、休憩や研修時の客席利用</p>
+            </div>
+        </div>
+
+        <div class="option">
+            <input type="checkbox" id="toggle2" class="toggle">
+            <label class="title" for="toggle2"><h4>■お客様へのご協力のお願い</h4></label>
+            <div class="content">
+                <p>・店内では、飲食時以外のマスク着用をお願いいたします</p>
+                <p>・入店時の手指の消毒にご協力ください</p>
+                <p>・レジに並ぶ際、目安を示すフロアステッカーに沿った列間隔の確保にご協力ください</p>
+                <p>・多数でお越しの際は、お1人がまとめてご注文願います（混雑時に入場制限をする場合がございます）</p>
+                <p>・発熱や体調不良の際はご入店をお控えください</p>
+            </div>
+        </div>
+        
+        <div class="option">
+            <input type="checkbox" id="toggle3" class="toggle">
+            <label class="title" for="toggle3"><h4>■サービスに関して</h4></label>
+            <div class="content">
+                <p>・直接お渡しする商品の提供、金銭授受時にグローブの着用</p>
+                <p>・ドリンクやフードのサンプリング中止</p>
+                <p>・地域活動・イベントの中止</p>
+                <p>・混雑時間帯の客席の譲り合いへのご協力お願いの実施</p>
+                <p>・店内設置しているミルク、はちみつ、パウダー類の一時引き下げ</p>
+                <p>・混雑状況に応じたドライブスルーサービスの一時休止や店内客席利用の制限</p>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+
+<script>
+    const menu = document.querySelectorAll(".js-menu");
+
+    function toggle() {
+      const content = this.nextElementSibling;
+      this.classList.toggle("is-active");
+      content.classList.toggle("is-open");
+    }
+
+    for (let i = 0; i < menu.length; i++) {
+      menu[i].addEventListener("click", toggle);
+    }
+</script>
+
+<br>
+
+<div class="container">
+    <div class="ani">
+    <div class="col-md-7 .order-md-2">
+        <h2 class="featurette-heading">Signature Food
+    </div>
+    <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+            <p class="lead">サーモンは刺身やカルパッチョで食べるのが美味しいですが、リッチな気分になれるサーモンステーキがおすすめです。サーモンの美味しさを引き立てる2種のソースも絶品です！</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="img/food.jpg">
+        </div>
+    </div>
+    </div>
+<br>
+<br>
+    <div class="ani">
+    <div class="col-md-7 order-md-2">
+        
+        <h2 class="featurette-heading">Our Coffee
+    </div>
+    <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+            <p class="lead">当店のコーヒー豆が厳選して世界中から買い付けています。そして、そのコーヒー豆の美味しさを最大限に引き出すために自社のロースタリーで焙煎しています。</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="img/barista.jpg">
+        </div>
+    </div>
+    </div>
+<br>
+<br>
+    <div class="ani">
+    <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Our Food
+    </div>
+    <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+            <p class="lead">当店は何よりまずは衛生管理に気をつけています。「安心・安全」をお届けするために日々継続的な努力を惜しみません。</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="img/food3.jpg">
+        </div>
+    </div>
+    </div>
+<br>
+<br>
+
+<div class="ani">
+<div class="container1">
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h3 class="featurette-heading">Address</h3>
+                <p class="lead">681 xxxx Drive, xxxxx xxxx #01 - 06 000000<br>
+                 Opening Hours</p>
+                <h3 class="featurette-heading">Mondays - Fruday: 10am - 9pm</h3>
+                    <p class="lead">Saturdays, Sundays & Public Holidays: 9am- 9pm</p>
+        </div>
+        <div class="col-md-5">
+            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
+            <img src="img/barista.jpg">
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+<br>
+
+<div class="contents">
+    <div class="ani">
+    <header>
+        <h2>店舗一覧</h2>
+    </header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="">
+                        <img src="img/restaurant2.jpg" alt=""/>
+                        <p><i class="fa-solid fa-location-dot"></i>東京都渋谷区xxxxxx xxxxx</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/restaurant3.jpg" alt=""/>
+                        <p><i class="fa-solid fa-location-dot"></i>千葉県松戸市xxxxx xxxxx</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/restaurant4.jpg" alt=""/>
+                        <p><i class="fa-solid fa-location-dot"></i>神奈川県横浜市xxxxx xxxx</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/restaurant5.jpg" alt=""/>
+                        <p><i class="fa-solid fa-location-dot"></i>埼玉県川越市xxxxx xxxx</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        // スクロールで反応するアニメーション
+        $(window).on('load scroll', function (){
+            SetScrollTiming('.ani');
+        });
+    });
+ 
+    // スクロールのタイミングでアニメーションさせる
+    function SetScrollTiming(target){
+        var box = $(target);
+        var animated = 'animated';
+ 
+        box.each(function(){
+            var boxOffset = $(this).offset().top;
+            var scrollPos = $(window).scrollTop();
+            var wh = $(window).height();
+ 
+            //画面内のどの位置で処理を実行するかで「100」の値を変更
+            if(scrollPos > boxOffset - wh + 100 ){
+                $(this).addClass('move');
+            }
+        });
+    }
+</script>
+
+<div id="footer">
+    <ul>
+        <li><a href="">プライバシーポリシー</a></li>
+        <li><a href="">お問合せ</a></li>
+        <li><a href="">運営会社</a></li>
+    </ul>
+</div>
+
+</div>   
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
