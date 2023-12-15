@@ -1,0 +1,171 @@
+@charset "UTF-8";
+/* reset */
+body, h1, h2, h3, h4, h5, h6, p, address,
+ul, ol, li, dl, dt, dd, img, form, table, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 100%;
+	text-align: left;
+	list-style-type: none;
+	border-collapse: collapse;
+}
+
+textarea { font-size: 100%; vertical-align:middle;}
+img { border-style: none; display: block; }
+hr { display: none; }
+em{font-style: normal}
+input{line-height:auto;vertical-align:middle;}
+strong.more{color:#c30}
+a{text-decoration: none;}
+
+
+body {
+	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+    -webkit-text-size-adjust: 100%;
+    background-color: #FFEFD5 !important;
+    margin: 0px;
+    padding: 0;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.bg-lightgray {
+    background-color: #d3d3d3;
+}
+
+
+
+
+.container img {
+    width: 100%;
+}
+.container1 {
+    background-color: black;
+    color: white;
+    padding: 1em 1em 1em;
+}
+.container1 img {
+    width: 100%;
+    display: block;
+}
+
+
+.accordion {
+    margin: 0em auto;
+    max-width: 80vw;
+}
+.toggle {
+    display: none;
+}
+.option {
+    position: relative;
+    margin-bottom: 1px;
+}
+.title,
+.content {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    transition: all 0.3s;
+}
+.title {
+    padding: 1em;
+    display: block;
+    background-color:  #FFC7AF;
+    padding: 10px;
+    cursor: pointer;
+}
+    
+.content {
+    max-height: 0;
+    overflow: hidden;
+}
+.content p {
+    margin: 0;
+    padding: 0.5em 1em 1em;
+}
+.toggle:checked + .title + .content {
+    max-height: 500px;
+    transition: all 1.5s;
+}
+
+.col-md-5 img {
+    width: 500;
+    height: 500;
+}
+
+
+
+.contents header h2 {
+    text-align: center;
+}
+
+.contents nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.contents ul li a{
+    color: black;
+    text-decoration: none;
+}
+
+.contents nav ul li a img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+  }
+
+
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+  @media (max-width: 768px){
+    .contents {display:none}
+    }
+
+
+#footer{
+    background-color: #a9a9a9;
+    padding: 1em;
+	margin: auto;
+    width: 100%;
+  }
+  
+  #footer ul {
+    text-align: center;
+  }
+  
+  #footer ul li {
+    display: inline;
+  }
+  
+  #footer ul li a {
+    color: black;
+    padding: 1em;
+  }
+  
+.ani{
+    transition: 1s all;
+    opacity: 0;
+    position: relative;
+    top: 100px;
+}
+.ani.move{
+    opacity: 1;
+    top: 0;
+}
